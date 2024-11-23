@@ -508,6 +508,8 @@
 
 }
 
+
+
 /* <!-- -----Resume Section----- --> */
 
 .title-section a button{
@@ -537,79 +539,235 @@
 }
 
 /* <!-- -----Contact Section----- --> */
-
-.contact-me{
-
-  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
-
-  width: 90%;
-
-}
-
-.contact-me form .form-label{
-
-  font-size: 14px;
-
-  color: #666;
-
-  font-weight: 600;
-
-}
-
-.contact-me form input, .contact-me form textarea{
-
-  color: #333;
-
+.contact-container {
+  height: 100vh; /* Full viewport height for centering */
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  gap: 30px; /* Space between left and right sections */
   padding: 20px;
-
-  width: 100%;
-
-  border: 1px solid #ebebeb;
-
-  font-size: 16px;
-
-  background: #f0f0f0;
-
-  border-radius: 5px;
-
-  font-weight: 600;
-
 }
 
-.contact-me .form-control:focus{
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 450px; /* Reduce the width of the contact section */
+}
 
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #a363aa;
+  font-size: 36px; /* Slightly smaller for balance */
+  margin-bottom: 5px;
+}
+
+.contact-left-title hr {
   border: none;
-
-  box-shadow: none;
-
-  background: #f0f0f0;
-
+  width: 100px; /* Shorter for compact design */
+  height: 4px;
+  background-color: #a363aa;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-.contact-me form button{
+.contact-inputs {
+  width: 100%;
+  max-width: 380px; /* Slightly smaller for better fit */
+  height: 45px; /* Compact height */
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
 
+.contact-left textarea {
+  width: 100%;
+  max-width: 380px; /* Match input size */
+  height: 120px; /* Compact height */
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: #f3f3f3;
+  font-weight: 500;
+  color: #666;
+}
+
+.contact-inputs:focus,
+.contact-left textarea:focus {
+  border: 2px solid #ff994f;
+}
+
+.contact-inputs::placeholder,
+.contact-left textarea::placeholder {
+  color: #a9a9a9;
+}
+
+.contact-left button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px; /* Adjust padding */
+  font-size: 15px; /* Slightly smaller text */
   color: #fff;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #37517e, rgba(0, 0, 0, 0.7));
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
+.contact-left button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-left button img {
+  height: 25px; /* Reduce icon size */
+}
+
+.contact-right img {
+  width: 300px; /* Smaller image width */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 800px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contact-left {
+    align-items: center; /* Center-align content on smaller screens */
+  }
+
+  .contact-inputs,
+  .contact-left textarea {
+    width: 80vw; /* Adjust width for responsiveness */
+  }
+
+  .contact-right {
+    display: none; /* Hide image section on smaller screens */
+  }
+}
+
+
+/* Chatbot Container */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Chatbot Icon */
+#chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background: #37517e;
-
-  width: 130px;
-
-  letter-spacing: 2px;
-
-  font-weight: 600;
-
-  font-size: 18px;
-
-  text-transform: uppercase;
-
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.contact-me form button:hover{
+#chatbot-icon:hover {
+  transform: scale(1.1);
+}
 
-  color: #fff;
+/* Chatbot Container */
+#chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: #fff;
+  border: 2px solid #37517e;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+}
 
-  background: #47b2e4;
+/* Chatbot Header */
+#chatbot-header {
+  background: #37517e;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+#close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Chatbot Body */
+#chatbot-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+}
+
+#chatbot-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#chatbot-input {
+  display: flex;
+  gap: 5px;
+}
+
+#chatbot-input input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#send-button {
+  background: #37517e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#send-button:hover {
+  background: #2d4163;
 }
 
 /* <!-- -----Footer Section----- --> */
