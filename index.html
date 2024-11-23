@@ -219,6 +219,25 @@
           <a href="https://github.com/Itsmeanbu" target="blank" class="btn p-2 mt-3">Visit</a>
         </div>
       </div>
+      <!-- -----4---- -->
+      <div class="row mt-5">
+        <div class="col-lg-6 col-md-12 col-12 project-img">
+          <img src="https://i.postimg.cc/SKzSwvxb/10a9f4a6-a9cc-416f-931d-95af02cf7c50.webp" alt="" class="img-fluid" />
+        </div>
+        <div class="col-lg-6 col-md-12 col-12 mt-md-3 project-detail">
+          <h3>Pass Word Strength Checker</h3>
+          <p class="mt-4">
+            A password strength checker is a simple yet powerful tool designed to enhance online security 
+            by evaluating the robustness of passwords. It analyzes the length, complexity, and uniqueness
+             of passwords, encouraging the use of diverse characters such as uppercase and lowercase letters,
+              numbers, and special symbols. Many advanced checkers also identify weak patterns or common words
+               to prevent predictable passwords. By providing real-time feedback and actionable tips, 
+               these tools help users create secure passwords that are resistant to brute force and
+                dictionary attacks, ultimately safeguarding sensitive data and improving cybersecurity awareness.
+                </p>
+          <a href="https://github.com/Itsmeanbu" target="blank" class="btn p-2 mt-3">Visit</a>
+        </div>
+      </div>
     </div>
   </section>
   <!-- -----Resume Section----- -->
@@ -238,35 +257,44 @@
       </a>
     </div>
   </section>
-  <!-- -----Contact Section----- -->
-  <section id="contact" class="contact-sec pt-5 pb-5 mb-5">
-    <div class="container title-section text-center">
-      <h2>Contact</h2>
-      <p>
-        Feel free to Contact me by submitting the form below and i will get
-        back to you as soon as possible
-      </p>
+<!-- -----Contact Section----- -->
+  
+
+  <div class="contact-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        <div class="contact-left-title">
+            <h2>">Contact Me</h2>
+            <hr>
+        </div>
+        <!-- Inputs for the contact form -->
+        <input type="hidden" name="access_key" value="3479a1dc-5db9-4cc6-9117-b3f4012cfe59">
+        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+        <button type="submit">
+            Submit <img src="arrow_icon.png" alt="Arrow Icon">
+        </button>
+    </form>
+    <div class="contact-right">
+        <img src="right_img.png" alt="Contact Illustration">
     </div>
-    <div class="container contact-me p-5 mt-5">
-      <form id="contact-form">
-        <div class="mb-3">
-          <label class="form-label">Name</label>
-          <input class="form-control" id="name" type="text" placeholder="Enter Your Name" value="" name="name" />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Email</label>
-          <input class="form-control" id="email" type="email" placeholder="Enter Your Email Address" value="" name="email" />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Message</label>
-          <textarea class="form-control" id="message" rows="10" placeholder="Enter Your Message" value="message" name="message"></textarea>
-        </div>
-        <div class="d-flex justify-content-center">
-          <button class="btn mt-4" type="submit">Submit</button>
-        </div>
-      </form>
+</div> 
+  <!-- -----ChatBot Section----- -->
+  <div id="chatbot-icon" onclick="toggleChatbot()">🤖</div>
+<div id="chatbot-container">
+    <div id="chatbot-header">
+        Ask Me Anything! 😊
+        <button id="close-button" onclick="toggleChatbot()">X</button>
     </div>
-  </section>
+    <div id="chatbot-body">
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <button id="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
   <!-- -----Footer Section----- -->
   <footer id="footer" class="footer-sec bg-dark text-light pt-4 pb-2">
     <div class="container">
