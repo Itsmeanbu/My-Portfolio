@@ -321,6 +321,7 @@
 }
 
 /* <!-- -----About Section----- --> */
+
 .about-sec, .projects-sec, .resume-sec, .contact-sec{
 
   margin-left: 300px;
@@ -655,7 +656,6 @@
   }
 
 }
-
 /* <!-- -----Projects Section----- --> */
 
 .project-detail h3{
