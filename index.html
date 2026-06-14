@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Anbu Abdul Kareem A | UI/UX Designer & Front-End Developer Portfolio</title>
+  <meta name="description" content="Professional portfolio of Anbu Abdul Kareem A, a passionate UI/UX Designer, Front-End Developer, and AI Enthusiast. Explore creative interfaces, clean code, and modern digital solutions.">
+  <meta name="keywords" content="Anbu Abdul Kareem, UI/UX Designer, Front-End Developer, AI Enthusiast, React Developer, Web Designer, Madurai, Portfolio, Web Developer, Computer Science Engineer">
+  <meta name="author" content="Anbu Abdul Kareem A">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anbu Abdul Kareem A | UI/UX & Web Developer Portfolio">
+  <meta property="og:description" content="I transform ideas into intuitive digital experiences through modern UI/UX design and responsive web development.">
+  <meta property="og:image" content="./portfolio_hero_art.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Anbu Abdul Kareem A | UI/UX & Web Developer Portfolio">
+  <meta property="twitter:description" content="I transform ideas into intuitive digital experiences through modern UI/UX design and responsive web development.">
+  <meta property="twitter:image" content="./portfolio_hero_art.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+  </div>
+
+  <!-- Loading Screen Overlay -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">Welcome to My Digital Universe<span>👨‍💻</span></div>
+    <div class="loader-bar-bg">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Canvas Particles Background -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="bg-gradient-mesh"></div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">It's Me Anbu<span>🏇</span></a>
+      
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Welcoming Opportunities
+          </div>
+          <h1 class="reveal">
+            Hi, I'm <br>
+            <span class="text-brand-gradient">ANBU ABDUL KAREEM</span>
+          </h1>
+          <div class="hero-typing-wrap reveal">
+            <h3>I'm a <span class="hero-typing" id="hero-typing"></span></h3>
+          </div>
+          <p class="hero-summary reveal">
+            I transform ideas into intuitive digital experiences through modern UI/UX design, responsive web development, and innovative technology solutions.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-cubes"></i> View Projects
+            </a>
+            <a href="./ANBU_RESUME.pdf" target="_blank" class="btn btn-secondary">
+              <i class="fa-solid fa-file-pdf"></i> Resume Preview
+            </a>
+            <a href="#contact" class="btn btn-accent">
+              <i class="fa-solid fa-paper-plane"></i> Hire Me
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-art-container reveal scale-in">
+          <div class="hero-img-wrap">
+            <img src="./profile_photo.jpg" alt="Anbu Abdul Kareem A - Profile Photo">
+          </div>
+          <!-- Slowly rotating orbital ring containing clock-aligned technology icons -->
+          <div class="floating-orbit-ring" id="orbit-ring">
+            <div class="floating-icon figma" data-tooltip="Figma"><i class="fa-brands fa-figma"></i></div>
+            <div class="floating-icon photoshop" data-tooltip="Adobe Photoshop"><span class="ps-logo-text">Ps</span></div>
+            <div class="floating-icon react" data-tooltip="React.js"><i class="fa-brands fa-react"></i></div>
+            <div class="floating-icon html5" data-tooltip="HTML5"><i class="fa-brands fa-html5"></i></div>
+            <div class="floating-icon javascript" data-tooltip="JavaScript"><i class="fa-brands fa-js"></i></div>
+            <div class="floating-icon firebase" data-tooltip="Firebase"><i class="fa-solid fa-fire"></i></div>
+            <div class="floating-icon github" data-tooltip="GitHub"><i class="fa-brands fa-github"></i></div>
+            <div class="floating-icon python" data-tooltip="Python"><i class="fa-brands fa-python"></i></div>
+            <div class="floating-icon mysql" data-tooltip="MySQL"><i class="fa-solid fa-database"></i></div>
+            <div class="floating-icon css3" data-tooltip="CSS3"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="floating-icon anaconda" data-tooltip="Anaconda Navigator"><i class="fa-solid fa-circle-nodes"></i></div>
+            <div class="floating-icon canva" data-tooltip="Canva"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ==========================================================================
+         ABOUT ME SECTION
+         ========================================================================== -->
+    <section class="about section-padding" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>About Me</h2>
+          <p>A closer look at my profile, academics, and background</p>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-text reveal reveal-left">
+            <p>
+              I am a Computer Science Engineering graduate from <strong>Latha Mathavan Engineering College</strong> with a strong passion for creating user-centered digital products.
+            </p>
+            <p>
+              My expertise spans UI/UX Design, Front-End Development, Web Technologies, and Artificial Intelligence. I enjoy solving problems through design thinking and building responsive applications that provide meaningful user experiences.
+            </p>
+            
+            <div class="counters-container">
+              <div class="counter-box">
+                <span class="counter-num" data-target="8.2">0.0</span>
+                <span class="counter-label">CGPA Academics</span>
+              </div>
+              <div class="counter-box">
+                <span class="counter-num" data-target="10">0</span>
+                <span class="counter-label">Projects Built</span>
+              </div>
+              <div class="counter-box">
+                <span class="counter-num" data-target="7">0</span>
+                <span class="counter-label">Certifications</span>
+              </div>
+              <div class="counter-box">
+                <span class="counter-num" data-target="2">0</span>
+                <span class="counter-label">Internships Done</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-info-panel reveal reveal-right">
+            <div class="info-cards">
+              <div class="info-card glass-panel">
+                <span class="info-card-title">Full Name</span>
+                <span class="info-card-value">Anbu Abdul Kareem A</span>
+              </div>
+              
+              <div class="info-card glass-panel">
+                <span class="info-card-title">Degree</span>
+                <span class="info-card-value">B.E. Computer Science & Eng.</span>
+              </div>
+              
+              <div class="info-card glass-panel">
+                <span class="info-card-title">Location</span>
+                <span class="info-card-value">Madurai, Tamil Nadu, India</span>
+              </div>
+              
+              <div class="info-card glass-panel">
+                <span class="info-card-title">Languages Spoken</span>
+                <span class="info-card-value">English, Tamil</span>
+              </div>
+              
+              <div class="info-card glass-panel" style="grid-column: span 2;">
+                <span class="info-card-title">Email Contact</span>
+                <span class="info-card-value"><a href="mailto:anbuabdul123@gmail.com">anbuabdul123@gmail.com</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS SECTION
+         ========================================================================== -->
+    <section class="skills section-padding" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Skills & Expertise</h2>
+          <p>My core technical strengths, design knowledge, and development toolkits</p>
+        </div>
+        
+        <div class="skills-filter reveal">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="design">UI/UX Design</button>
+          <button class="filter-btn" data-filter="frontend">Front-End</button>
+          <button class="filter-btn" data-filter="programming">Programming</button>
+          <button class="filter-btn" data-filter="tools">Tools</button>
+        </div>
+        
+        <div class="skills-grid">
+          <!-- UI/UX Design Category -->
+          <div class="skill-category glass-panel reveal" data-category="design">
+            <h3 class="skill-category-title">
+              <i class="fa-solid fa-bezier-curve"></i> UI/UX Design
+            </h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-name">Figma</span>
+                <i class="fa-brands fa-figma skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Adobe Photoshop</span>
+                <i class="fa-solid fa-paintbrush skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Wireframing</span>
+                <i class="fa-solid fa-border-top-left skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Prototyping</span>
+                <i class="fa-solid fa-arrow-pointer skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">User Research</span>
+                <i class="fa-solid fa-magnifying-glass-chart skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Design Systems</span>
+                <i class="fa-solid fa-layer-group skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">User Flow</span>
+                <i class="fa-solid fa-diagram-project skill-icon"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Front-End Development Category -->
+          <div class="skill-category glass-panel reveal" data-category="frontend">
+            <h3 class="skill-category-title">
+              <i class="fa-solid fa-code"></i> Front-End
+            </h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-name">HTML5</span>
+                <i class="fa-brands fa-html5 skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">CSS3</span>
+                <i class="fa-brands fa-css3-alt skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <i class="fa-brands fa-js skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">React.js</span>
+                <i class="fa-brands fa-react skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Responsive Design</span>
+                <i class="fa-solid fa-mobile-screen skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Firebase Integration</span>
+                <i class="fa-solid fa-fire skill-icon"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Programming Category -->
+          <div class="skill-category glass-panel reveal" data-category="programming">
+            <h3 class="skill-category-title">
+              <i class="fa-solid fa-terminal"></i> Programming
+            </h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <i class="fa-brands fa-python skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">MySQL</span>
+                <i class="fa-solid fa-database skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">OOP Concepts</span>
+                <i class="fa-solid fa-box-archive skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Data Structures</span>
+                <i class="fa-solid fa-network-wired skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Algorithms</span>
+                <i class="fa-solid fa-gears skill-icon"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tools Category -->
+          <div class="skill-category glass-panel reveal" data-category="tools">
+            <h3 class="skill-category-title">
+              <i class="fa-solid fa-screwdriver-wrench"></i> Tools
+            </h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-name">GitHub</span>
+                <i class="fa-brands fa-github skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">VS Code</span>
+                <i class="fa-solid fa-laptop-code skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">AI Productivity Tools</span>
+                <i class="fa-solid fa-robot skill-icon"></i>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">MS Office</span>
+                <i class="fa-regular fa-file-word skill-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROJECTS SECTION
+         ========================================================================== -->
+    <section class="projects section-padding" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Featured Projects</h2>
+          <p>A curated showcase of my engineering builds and UX designs</p>
+        </div>
+        
+        <div class="skills-filter reveal">
+          <button class="filter-btn active" data-proj-filter="all">All Projects</button>
+          <button class="filter-btn" data-proj-filter="web">Web Apps</button>
+          <button class="filter-btn" data-proj-filter="python">Python & AI</button>
+        </div>
+        
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card glass-panel reveal" data-proj-cat="web">
+            <div class="project-media">
+              <div class="project-overlay"></div>
+              <div class="project-visual">
+                <i class="fa-solid fa-blog"></i>
+              </div>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Firestore</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Firebase Blog Application</h3>
+              <p class="project-desc">A full-stack collaborative blog featuring Google authentication, real-time Firestore synchronization, and clean CRUD features with responsive layouts.</p>
+              <div class="project-links">
+                <a href="#" class="project-link view-details-btn" data-project-id="blog-app">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </a>
+                <a href="https://github.com/anbuabdul" target="_blank" class="project-link">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2 -->
+          <div class="project-card glass-panel reveal" data-proj-cat="web">
+            <div class="project-media">
+              <div class="project-overlay"></div>
+              <div class="project-visual">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Vanilla JS</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Personal Portfolio Website</h3>
+              <p class="project-desc">A fully interactive, glassmorphic portfolio representing professional resume details, micro-interactions, responsive styling, and form processing.</p>
+              <div class="project-links">
+                <a href="#" class="project-link view-details-btn" data-project-id="portfolio-website">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </a>
+                <a href="https://github.com/anbuabdul" target="_blank" class="project-link">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 3 -->
+          <div class="project-card glass-panel reveal" data-proj-cat="python">
+            <div class="project-media">
+              <div class="project-overlay"></div>
+              <div class="project-visual">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP Basics</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>AI Chatbot System</h3>
+              <p class="project-desc">An interactive local chatbot designed in Python using basic Natural Language Processing concepts to handle user inputs, generate responses, and log context.</p>
+              <div class="project-links">
+                <a href="#" class="project-link view-details-btn" data-project-id="ai-chatbot">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </a>
+                <a href="https://github.com/anbuabdul" target="_blank" class="project-link">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 4 -->
+          <div class="project-card glass-panel reveal" data-proj-cat="python">
+            <div class="project-media">
+              <div class="project-overlay"></div>
+              <div class="project-visual">
+                <i class="fa-solid fa-cloud-sun-rain"></i>
+              </div>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">OpenWeather API</span>
+                <span class="tech-tag">JSON</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Weather Forecasting App</h3>
+              <p class="project-desc">Fetches real-time geographical climate conditions using the OpenWeather API, presenting interactive weather warnings, wind speeds, and visual summaries.</p>
+              <div class="project-links">
+                <a href="#" class="project-link view-details-btn" data-project-id="weather-app">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </a>
+                <a href="https://github.com/anbuabdul" target="_blank" class="project-link">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 5 -->
+          <div class="project-card glass-panel reveal" data-proj-cat="python">
+            <div class="project-media">
+              <div class="project-overlay"></div>
+              <div class="project-visual">
+                <i class="fa-solid fa-key"></i>
+              </div>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Cryptography</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Password Generator tool</h3>
+              <p class="project-desc">A secure console utility that builds highly randomized passwords based on custom criteria (case variables, numeric values, symbols) for safety enhancement.</p>
+              <div class="project-links">
+                <a href="#" class="project-link view-details-btn" data-project-id="password-gen">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </a>
+                <a href="https://github.com/anbuabdul" target="_blank" class="project-link">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 6 -->
+          <div class="project-card glass-panel reveal" data-proj-cat="python">
+            <div class="project-media">
+              <div class="project-overlay"></div>
+              <div class="project-visual">
+                <i class="fa-solid fa-qrcode"></i>
+              </div>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">qrcode Library</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>QR Code Generator</h3>
+              <p class="project-desc">Encodes web hyperlinks, localized profiles, or raw text strings into scan-ready high-contrast QR graphics using quick rendering and export algorithms.</p>
+              <div class="project-links">
+                <a href="#" class="project-link view-details-btn" data-project-id="qr-gen">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </a>
+                <a href="https://github.com/anbuabdul" target="_blank" class="project-link">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXPERIENCE SECTION
+         ========================================================================== -->
+    <section class="experience section-padding" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Professional Experience</h2>
+          <p>My career timeline, training paths, and professional internships</p>
+        </div>
+        
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-date">Sep 2024 – Oct 2024</span>
+              <h3>Full Stack Development Intern</h3>
+              <span class="timeline-company">CodTech IT Solutions</span>
+              <p>
+                Successfully engineered a responsive Full Stack Blog platform with secure Firebase user authentication and dynamic real-time Firestore database storage. Constructed reactive UI views, optimizing load speeds and layout usability across viewports.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-date">Aug 2024 – Sep 2024</span>
+              <h3>Artificial Intelligence Intern</h3>
+              <span class="timeline-company">Skill Upgrade</span>
+              <p>
+                Gained deep knowledge of core AI methodologies, machine learning workflows, and data processing. Constructed analytical models using Python, implementing linear classification models and testing algorithms on dynamic training sets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CERTIFICATIONS SECTION
+         ========================================================================== -->
+    <section class="certifications section-padding" id="certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Credentials & Certificates</h2>
+          <p>Recognitions, continuous learning milestones, and structured course certifications</p>
+        </div>
+        
+        <div class="certs-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card glass-panel reveal">
+            <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Google Cyber Security</h3>
+            <span class="cert-issuer">Google</span>
+          </div>
+          
+          <!-- Cert 2 -->
+          <div class="cert-card glass-panel reveal">
+            <div class="cert-icon"><i class="fa-solid fa-server"></i></div>
+            <h3>ServiceNow Administrator</h3>
+            <span class="cert-issuer">ServiceNow</span>
+          </div>
+          
+          <!-- Cert 3 -->
+          <div class="cert-card glass-panel reveal">
+            <div class="cert-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+            <h3>IBM Experience Based Learning</h3>
+            <span class="cert-issuer">IBM</span>
+          </div>
+          
+          <!-- Cert 4 -->
+          <div class="cert-card glass-panel reveal">
+            <div class="cert-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>UiPath RPA</h3>
+            <span class="cert-issuer">UiPath</span>
+          </div>
+          
+          <!-- Cert 5 -->
+          <div class="cert-card glass-panel reveal">
+            <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+            <h3>Python Django Full Stack</h3>
+            <span class="cert-issuer">Udemy Academy</span>
+          </div>
+          
+          <!-- Cert 6 -->
+          <div class="cert-card glass-panel reveal">
+            <div class="cert-icon"><i class="fa-solid fa-palette"></i></div>
+            <h3>UI/UX Master Class</h3>
+            <span class="cert-issuer">UX Academy</span>
+          </div>
+          
+          <!-- Cert 7 -->
+          <div class="cert-card glass-panel reveal">
+            <div class="cert-icon"><i class="fa-brands fa-wordpress"></i></div>
+            <h3>WordPress Website Dev</h3>
+            <span class="cert-issuer">Coursera</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         RESUME SECTION
+         ========================================================================== -->
+    <section class="resume section-padding" id="resume">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Professional Resume</h2>
+          <p>Review and download my complete profile, credentials, and educational timeline</p>
+        </div>
+        
+        <div class="resume-grid">
+          <div class="resume-preview glass-panel reveal reveal-left">
+            <div class="resume-doc-shadow">
+              <span class="resume-doc-badge">PDF</span>
+              <i class="fa-solid fa-file-pdf resume-doc-icon"></i>
+              <span class="resume-doc-text">ANBU_RESUME.pdf</span>
+              <div class="resume-hover-overlay">
+                <a href="./ANBU_RESUME.pdf" target="_blank" class="btn btn-accent btn-sm">
+                  <i class="fa-solid fa-eye"></i> View Fullscreen
+                </a>
+              </div>
+            </div>
+            <div class="resume-preview-actions">
+              <p style="color: var(--text-secondary); margin-bottom: 20px;">Review or download my official curriculum vitae.</p>
+              <div class="resume-buttons-row">
+                <a href="./ANBU_RESUME.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                  <i class="fa-solid fa-eye"></i> View Resume
+                </a>
+                <a href="./ANBU_RESUME.pdf" download="Anbu_Abdul_Kareem_A_Resume.pdf" class="btn btn-primary btn-sm">
+                  <i class="fa-solid fa-download"></i> Download
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="resume-info reveal reveal-right">
+            <div>
+              <h3 class="resume-block-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+              <div class="resume-list">
+                <div class="resume-item-card glass-panel">
+                  <h4>B.E. Computer Science & Engineering</h4>
+                  <div class="resume-item-meta">
+                    <span>Latha Mathavan Engineering College</span>
+                    <span>2020 – 2024</span>
+                  </div>
+                  <p class="resume-item-detail">Engaged in software design patterns, databases, object-oriented concepts, and algorithmic challenges. Graduated with a high average score of 8.2 CGPA.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="resume-block-title"><i class="fa-solid fa-briefcase"></i> Core Focus</h3>
+              <div class="resume-list">
+                <div class="resume-item-card glass-panel">
+                  <h4>UI/UX & Interactive Design</h4>
+                  <p class="resume-item-detail">Specialized in wireframing, high-fidelity prototypes in Figma, and design systems for standard business architectures.</p>
+                </div>
+                <div class="resume-item-card glass-panel">
+                  <h4>Front-End Engineering</h4>
+                  <p class="resume-item-detail">Committed to developing clean, modular component structures with semantic accessibility standards, styling triggers, and database links.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section class="contact section-padding" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Let's Build Something Amazing Together</h2>
+          <p>Get in touch for internships, projects, full-time opportunities, or tech discussions</p>
+        </div>
+        
+        <div class="contact-grid">
+          <div class="contact-info reveal reveal-left">
+            <div class="contact-card-item glass-panel">
+              <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-card-details">
+                <h4>Email Me</h4>
+                <p><a href="mailto:anbuabdul123@gmail.com">anbuabdul123@gmail.com</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-card-item glass-panel">
+              <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-card-details">
+                <h4>Call Me</h4>
+                <p>+91 8012280284</p>
+              </div>
+            </div>
+            
+            <div class="contact-card-item glass-panel">
+              <div class="contact-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <div class="contact-card-details">
+                <h4>Location</h4>
+                <p>Madurai, Tamil Nadu, India</p>
+              </div>
+            </div>
+            
+            <div class="contact-socials">
+              <h4 class="social-title">Social Channels</h4>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/anbu-abdul-kareem-a-49462b2a4/" target="_blank" class="social-link linkedin" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Itsmeanbu" target="_blank" class="social-link github" title="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/yakareem_786/" target="_blank" class="social-link instagram" title="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.behance.net/anbuaba" target="_blank" class="social-link behance" title="Behance">
+                  <i class="fa-brands fa-behance"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-wrap reveal reveal-right">
+            <!-- Modern glassmorphic form -->
+            <form class="contact-form glass-panel" id="portfolio-contact-form">
+              <!-- Form Success overlay -->
+              <div class="form-success-overlay" id="form-success">
+                <div class="success-icon" id="status-icon">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 id="status-title" style="font-size: 1.25rem; margin-bottom: 5px;">Message Sent Successfully!</h3>
+                <p id="status-message" style="color: var(--text-secondary); font-size: 0.95rem;">Thank you. I'll get back to you shortly.</p>
+                <button type="button" class="btn btn-secondary btn-sm" id="close-success-btn" style="margin-top: 10px;">Send Another Message</button>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                <label for="name" class="form-label">Full Name</label>
+              </div>
+              
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                <label for="email" class="form-label">Email Address</label>
+              </div>
+              
+              <div class="form-group">
+                <input type="text" id="subject" name="subject" class="form-input" placeholder=" " required>
+                <label for="subject" class="form-label">Subject</label>
+              </div>
+              
+              <div class="form-group">
+                <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
+                <label for="message" class="form-label">Your Message</label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" id="form-submit-btn">
+                <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <a href="#hero" class="footer-logo">It's Me Anbu<span>🏇</span></a>
+      <div class="footer-socials">
+        <a href="https://linkedin.com" target="_blank" class="footer-social-link linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/anbuabdul" target="_blank" class="footer-social-link github"><i class="fa-brands fa-github"></i></a>
+        <a href="https://instagram.com" target="_blank" class="footer-social-link instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://behance.net" target="_blank" class="footer-social-link behance"><i class="fa-brands fa-behance"></i></a>
+      </div>
+      <p class="footer-text">Designed & Developed by Anbu Abdul Kareem A</p>
+      <p class="footer-text">&copy; 2026 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT LIGHTBOX / DETAIL MODAL
+       ========================================================================== -->
+  <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-content glass-panel">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-media" id="modal-media-visual">
+        <!-- Replaced via script -->
+      </div>
+      <div class="modal-info">
+        <div class="modal-title-wrap">
+          <h3 class="modal-title" id="modal-title">Project Title</h3>
+          <div class="modal-tags" id="modal-tags">
+            <!-- Replaced via script -->
+          </div>
+        </div>
+        <div class="modal-body">
+          <p id="modal-desc">Detailed project description goes here...</p>
+          <h4>Key Features:</h4>
+          <ul class="modal-features" id="modal-features">
+            <!-- Replaced via script -->
+          </ul>
+        </div>
+        <div class="modal-actions">
+          <a href="https://github.com/anbuabdul" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fa-brands fa-github"></i> View Repository
+          </a>
+          <button type="button" class="btn btn-secondary btn-sm" id="modal-live-demo-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back To Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Canvas Confetti for Form Success Animations (Loaded from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Interactive JavaScript -->
+  <script src="./script.js"></script>
+</body>
+</html>
